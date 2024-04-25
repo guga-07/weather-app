@@ -2,6 +2,19 @@ use std::io;
 use serde::Deserialize; 
 use colored::*;
 
+const SIMB: &str = r#" 
+
+
+                      
+  |============================|
+  |  ██████  ██     ██  ██████ |
+  |  ██   ██ ██     ██ ██      |
+  |  ██████  ██  █  ██ ██      |
+  |  ██   ██ ██ ███ ██ ██      |
+  |  ██   ██  ███ ███   ██████ |
+  |============================|                      
+"#;
+
 // Struct to deserialize the JSON response from OpenWeatherMap API
 #[derive(Deserialize, Debug)]
 struct WeatherResponse {
@@ -100,7 +113,8 @@ fn get_temperature_emoji(temperature: f64) -> &'static str {
 }
 
 fn main() {
-    println!("{}", "მოგესალმებით, გსურთ იხილოთ  ამინდი?"c.bright_yellow()); // Displaying welcome message
+    println!("{}", SIMB);
+    println!("{}", "მოგესალმებით, გსურთ იხილოთ  ამინდი?".bright_yellow()); // Displaying welcome message
 
     loop {
         println!("{}", "გთხოვთ შეიყვანოთ ქალაქის დასახელება".bright_green()); // Prompting user to enter city name
