@@ -130,7 +130,7 @@ fn main() {
         let country_code = country_code.trim();
 
         
-        let api_key = "4bb795ffd486c76d225a91bf10b01451"; 
+        let api_key = " "; 
 
         
         match get_weather_info(&city, &country_code, api_key) {
